@@ -26,6 +26,7 @@
         <java.version>17</java.version>
         <spring-cloud.version>2023.0.1</spring-cloud.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <!-- ================= SPRING CLOUD DEP MANAGEMENT ================= -->
@@ -43,7 +44,6 @@
 
     <!-- ================= DEPENDENCIES ================= -->
     <dependencies>
-
         <!-- Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -100,16 +100,14 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <!-- ================= BUILD ================= -->
     <build>
         <finalName>ecommerce-microservices</finalName>
-
         <plugins>
 
-            <!-- Spring Boot Plugin (FIXED) -->
+            <!-- Spring Boot Plugin -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
@@ -121,7 +119,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <!-- ⚠️ CHANGE THIS IF YOUR PACKAGE IS DIFFERENT -->
+                    <!-- Update this main class to your actual package -->
                     <mainClass>com.hoangtien2k3.EcommerceMicroservicesApplication</mainClass>
                 </configuration>
             </plugin>
