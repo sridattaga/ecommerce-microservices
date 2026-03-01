@@ -43,7 +43,6 @@
 
     <!-- ================= DEPENDENCIES ================= -->
     <dependencies>
-
         <!-- Web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -100,7 +99,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <!-- ================= BUILD ================= -->
@@ -108,11 +106,11 @@
         <finalName>ecommerce-microservices</finalName>
 
         <plugins>
-
-            <!-- Spring Boot Plugin (FIXED) -->
+            <!-- Spring Boot Plugin (creates fat/executable JAR) -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>3.2.5</version>
                 <executions>
                     <execution>
                         <goals>
@@ -121,7 +119,6 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <!-- ⚠️ CHANGE THIS IF YOUR PACKAGE IS DIFFERENT -->
                     <mainClass>com.hoangtien2k3.EcommerceMicroservicesApplication</mainClass>
                 </configuration>
             </plugin>
@@ -134,8 +131,6 @@
                     <release>17</release>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
-
 </project>
